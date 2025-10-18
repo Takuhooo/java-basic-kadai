@@ -18,7 +18,7 @@ public class Car_Chapter15 {
 		case 4 -> 40;
 		case 5 -> 50;
 		default -> 10;
-		}
+		};
 	}
 	
 	//走行速度を表示するメソッド
