@@ -1,26 +1,17 @@
 package kadai_028;
 
-import java.util.HashMap;
-
 public class JyankenExec_Chapter28 {
 	public static void main(String[] args) {
-		//じゃんけんクラスのインスタンスを作成
+		// じゃんけんクラスのインスタンスを作成する
 		Jyanken_Chapter28 jyanken = new Jyanken_Chapter28();
-		
-		//ハッシュマップを作成
-		HashMap<String, String> map = new HashMap<>();
-		map.put("r", "グー");
-		map.put("s", "チョキ");
-		map.put("p", "パー");
-		
-		//自分のじゃんけんの手を入力
-		String myChoice = jyanken.getMyChoice();
-		
-		//対戦相手の手を乱数で選ぶ
-		String enemyChoice = jyanken.getRandom();
-		
-		//じゃんけんの結果を出力
-		jyanken.playGame(myChoice, enemyChoice, map);
-	}
 
+		// 自分のじゃんけんの手を入力する
+		String myChoice = jyanken.getMyChoice();
+
+		// 対戦相手のじゃんけんの手が乱数で選ばれる
+		String random = jyanken.getRandom();
+
+		// じゃんけんを行う
+		jyanken.playGame(myChoice, random);
+	}
 }
