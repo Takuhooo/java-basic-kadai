@@ -6,15 +6,25 @@ public class Jyanken_Chapter28 {
 	//自分のジャンケンの手を入力する
 	public String getMyChoice() {
 		Scanner scanner = new Scanner(System.in);
+		String input = "";
 		
 		System.out.println("自分のじゃんけんの手を入力しましょう");
 		System.out.println("グーはrockのrを入力しましょう");
 		System.out.println("チョキはscissorsのsを入力しましょう");
 		System.out.println("パーはpaperのpを入力しましょう");
 		
-		String input = scanner.next();
-		scanner.close();
+		while(true) {
+			input = scanner.next();
+			input = input.toLowerCase();
+			
+			if (input.equals("r") || input.equals("s") || input.equals("p")) {
+				break;
+			} else {
+				System.out.println("入力が正しくありません。r,s,pのいずれかを入力してください");
+			}
+		}
 		
+		scanner.close();
 		return input;
 	}
 		
